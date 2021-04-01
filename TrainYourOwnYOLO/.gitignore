@@ -4,6 +4,9 @@
 *.pb 
 *.gz
 *.npy
+*.yolo
+*.yolo.h5
+*.yolov3.weights
 test.py
 
 # Image Files
