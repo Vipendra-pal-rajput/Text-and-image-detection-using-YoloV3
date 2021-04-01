@@ -1,0 +1,7 @@
+Stamp
+Signature
+Text_region
+Picture_image
+extra_dark
+photo_image
+QR code
