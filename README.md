@@ -1,6 +1,6 @@
-# TrainYourOwnYOLO: Building a Custom Object Detector from Scratch [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+# TrainYourOwnYOLO: Building a Custom Object Detector(like : Image, Text region etc.) from Scratch [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-This repo let's you train a custom image detector using the state-of-the-art [YOLOv3](https://pjreddie.com/darknet/yolo/) computer vision algorithm. For a short write up check out this [medium post](https://medium.com/@muehle/how-to-train-your-own-yolov3-detector-from-scratch-224d10e55de2). This repo works with TensorFlow 2.3 and Keras 2.4.
+This repo let's you train a custom image detector using the state-of-the-art [YOLOv3](https://pjreddie.com/darknet/yolo/) computer vision algorithm. This repo works with TensorFlow 2.3 and Keras 2.4.
 
 ### Pipeline Overview
 
@@ -24,7 +24,7 @@ To build and test your YOLO object detection algorithm follow the below steps:
 
 ## Getting Started
 
-### Google Colab Tutorial <a href="https://colab.research.google.com/github/AntonMu/TrainYourOwnYOLO/blob/master/TrainYourOwnYOLO.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+### Google Colab Tutorial <a href="https://colab.research.google.com/github/Vipendra-pal-rajput/Text-and-image-detection-using-YoloV3/blob/main/TrainYourOwnYOLOFinal.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 With Google Colab you can skip most of the set up steps and start training your own model right away. 
 
 ### Requisites
@@ -34,7 +34,7 @@ The only hard requirement is a running version of python 3.6 or 3.7. To install 
 and follow the installation instructions. Note that this repo has only been tested with python 3.6 and python 3.7 thus it is recommened to use either `python3.6` or `python3.7`.
 
 To speed up training, it is recommended to use a **GPU with CUDA** support. For example on [AWS](/2_Training/AWS/) you can use a `p2.xlarge` instance (Tesla K80 GPU with 12GB memory). Inference is very fast even on a CPU with approximately ~2 images per second. If you want to use your own machine, follow the instructions at [tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu) to install CUDA drivers. Make sure to install the [correct version of CUDA and cuDNN](https://www.tensorflow.org/install/source#linux). 
-
+Or you can choose GPU in "Runtime -> change run type --> GPU" in option at top of google colab ipynb
 
 ### Installation
 
@@ -42,8 +42,8 @@ To speed up training, it is recommended to use a **GPU with CUDA** support. For 
 
 Clone this repo with:
 ```bash
-git clone https://github.com/AntonMu/TrainYourOwnYOLO
-cd TrainYourOwnYOLO/
+git clone https://github.com/Vipendra-pal-rajput/Text-and-image-detection-using-YoloV3
+cd Text-and-image-detection-using-YoloV3/
 ```
 Create Virtual **(Linux/Mac)** Environment:
 ```bash
@@ -73,17 +73,17 @@ pip install -r requirements.txt
 If this fails, you may have to upgrade your pip version first with `pip install pip --upgrade`.
 
 ## Quick Start (Inference only)
-To test the cat face detector on test images located in [`TrainYourOwnYOLO/Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) run the `Minimal_Example.py` script in the root folder with:
+To test the object detector on test images located in [`Text-and-image-detection-using-YoloV3/Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) run the `Minimal_Example.py` script in the root folder with:
 
 ```bash
 python Minimal_Example.py
 ```
 
-The outputs are saved in [`TrainYourOwnYOLO/Data/Source_Images/Test_Image_Detection_Results`](/Data/Source_Images/Test_Image_Detection_Results). This includes:
- - Cat pictures with bounding boxes around faces with confidence scores and
+The outputs are saved in [`Text-and-image-detection-using-YoloV3/Data/Source_Images/Test_Image_Detection_Results`](/Data/Source_Images/Test_Image_Detection_Results). This includes:
+ - multiple object(Image, text_region, stamp, Signature) with bounding boxes around object with confidence scores and
  - [`Detection_Results.csv`](/Data/Source_Images/Test_Image_Detection_Results/Detection_Results.csv) file with file names and locations of bounding boxes.
 
- If you want to detect cat faces in your own pictures, replace the cat images in [`Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) with your own images.
+ If you want to detect Object in your own pictures, replace the images in [`Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) with your own images.
 
 ## Full Start (Training and Inference)
 
@@ -106,8 +106,6 @@ wandb -login <API_KEY>
 ```
 where `<API_KEY>` is your Weights & Biases API key. 
 
-### Multi-Stream-Multi-Model-Multi-GPU
-If you want to run multiple streams in parallel, head over to [github.com/bertelschmitt/multistreamYOLO](https://github.com/bertelschmitt/multistreamYOLO). Thanks to @bertelschmitt for putting the work into this.
 
 ## License
 
@@ -138,17 +136,17 @@ Unless explicitly stated otherwise at the top of a file, all code is licensed un
 
 ## Need more help? File an Issue!
 If you would like to file an issue, please use the provided issue template and make sure to complete all fields. This makes it easier to reproduce the issue for someone trying to help you. 
-
-![Issue](/Utils/Screenshots/Issue.gif)
-
-Issues without a completed issue template will be closed after 7 days. 
+Just reach me Out on following : 
+For more working repositeries you can see on :
+- GitHub : https://github.com/Vipendra-pal-rajput
+- linkedIn: https://www.linkedin.com/in/vipendrapal-rajput-3a0674160/
+						
 
 ## Stay Up-to-Date
 
 - ⭐ **star** this repo to get notifications on future improvements and
 - 🍴 **fork** this repo if you like to use it as part of your own project.
 
-![CatVideo](/Utils/Screenshots/CatVideo.gif)
 
 ## Licensing 
 This work is licensed under a [Creative Commons Attribution 4.0 International
@@ -171,7 +169,21 @@ Under the following terms:
     url={https://github.com/AntonMu/TrainYourOwnYOLO}
   }
   ```
-If your work doesn't include a citation list, simply link this [github repo](https://github.com/AntonMu/TrainYourOwnYOLO)!
+ 
+ Edited By:
+ 
+  ```text
+  @misc{Text-and-image-detection-using-YoloV3,
+    title={TrainYourOwnYOLO: Building a Custom Object Detector(like : Image, Text region etc.) from Scratch},
+    author={Vipendra pal rajput},
+    year={2021},
+    url={https://github.com/Vipendra-pal-rajput/Text-and-image-detection-using-YoloV3}
+  }
+  ```
+ 
+ 
+  
+If your work doesn't include a citation list, simply link this [github repo](https://github.com/Vipendra-pal-rajput/Text-and-image-detection-using-YoloV3)!
  
 [![CC BY 4.0][cc-by-image]][cc-by]
 
