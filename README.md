@@ -79,6 +79,12 @@ To test the object detector on test images located in [`Text-and-image-detection
 python Minimal_Example.py
 ```
 
+And if you have video file and you want to detect object then go to test images or video file located in [`Text-and-image-detection-using-YoloV3/Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) then Switch to diretory  [`Text-and-image-detection-using-YoloV3/3_Inference`](/3_Inference) for  run the `Detector.py` script in the root folder with:
+
+```bash
+python Detector.py
+```
+
 The outputs are saved in [`Text-and-image-detection-using-YoloV3/Data/Source_Images/Test_Image_Detection_Results`](/Data/Source_Images/Test_Image_Detection_Results). This includes:
  - multiple object(Image, text_region, stamp, Signature) with bounding boxes around object with confidence scores and
  - [`Detection_Results.csv`](/Data/Source_Images/Test_Image_Detection_Results/Detection_Results.csv) file with file names and locations of bounding boxes.
