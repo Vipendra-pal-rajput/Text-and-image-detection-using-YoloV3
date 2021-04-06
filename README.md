@@ -109,7 +109,7 @@ where `<API_KEY>` is your Weights & Biases API key.
 ## Output Detected Images
 
 ### On images
-![Output1](/Utils/Screenshots/output2.gif, /Utils/Screenshots/video_output.gif)
+![Output1](/Utils/Screenshots/output2.gif)
 
 ### on Video
 ![video_output](/Utils/Screenshots/video_output.gif)
