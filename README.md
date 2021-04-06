@@ -108,7 +108,7 @@ where `<API_KEY>` is your Weights & Biases API key.
 
 ## Output Detected Images
 
-![Output1](/Utils/Screenshots/output1.gif)
+![Output1](/Utils/Screenshots/output2.gif)
 
 ## License
 
